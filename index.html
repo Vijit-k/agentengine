@@ -23,7 +23,7 @@ const CONFIG = {
   region:       "Thane & Mumbai",
   whatsapp:     "919539633566",          // country code + number, no + or spaces
   sheetWebhook: "https://script.google.com/macros/s/AKfycbyGjaRimZH0Rv95ImbAdk-XSpV_JHnWkRMYiROPtKS5xCoObX6pj0E5Uta9KNIwrYfVSQ/exec",                       // paste Google Apps Script web app URL here
-  metaPixelId:  "1451408073687469",       // leave "" to turn off
+  metaPixelId:  "2654330038332024",       // leave "" to turn off
   areas:        ["Thane", "Mumbai", "Navi Mumbai", "Kalyan / Dombivli", "Mira Road / Bhayander", "Other"]
 };
 </script>
@@ -456,6 +456,16 @@ footer p{margin-bottom:8px}
       "Name: " + d.name + "\nArea: " + d.area + "\nResult: " + answers._tier +
       "\nCurrently: " + payload.occupation + "\nAge: " + payload.age + "\nTime per week: " + payload.hours;
     const ty = document.getElementById("tyWa"); ty.href = waLink(msg); ty.target = "_blank"; ty.rel = "noopener";
+    document.getElementById("quiz").scrollIntoView({behavior:"smooth", block:"center"});
+    // after submitting, every WhatsApp button on the page carries their answers
+    document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(msg); });
+    // bottom bar: swap "Take the quiz" for a single full-width WhatsApp button
+    const sticky = document.querySelector(".sticky");
+    if (sticky) {
+      const quizBtn = sticky.querySelector('a[href="#apply"]'); if (quizBtn) quizBtn.style.display = "none";
+      const waBtn = sticky.querySelector("[data-wa]");
+      if (waBtn) { waBtn.textContent = "Get my result on WhatsApp"; waBtn.style.background = "#25d366"; waBtn.style.borderColor = "#25d366"; waBtn.style.color = "#fff"; }
+    }
     ty.addEventListener("click", () => track("Click_thanks_whatsapp"));
   });
 
