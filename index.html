@@ -15,6 +15,7 @@
    AGENTENGINE SETTINGS. Change only this block per client.
    ========================================================= */
 const CONFIG = {
+  brandName:    "Financial Awareness Champions",   // shown at the top of the page
   leaderName:   "Vijit Kunhikandi",
   leaderTitle:  "Kotak Life Associate Agency Partner",
   leaderBio:    "22+ years in corporate India leading service delivery teams. PMP certified. Now building a team of advisors who help families plan for the unexpected.",
@@ -69,6 +70,7 @@ h2{font-size:clamp(26px,4.2vw,38px);line-height:1.2;font-weight:700;margin-botto
 .hero{position:relative;overflow:hidden;padding:56px 0 72px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%)}
 .hero::before{content:"";position:absolute;width:620px;height:620px;right:-180px;top:-140px;background:radial-gradient(circle,rgba(212,175,100,.22),transparent 65%);pointer-events:none}
 .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;font-size:14px;color:var(--muted)}
+@media(max-width:520px){.topbar>span:last-child{display:none}}
 .brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--white)}
 .brand .dot{width:34px;height:34px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:15px;font-weight:700}
 .hero .lead{margin:20px 0 32px}
@@ -177,7 +179,7 @@ footer p{margin-bottom:8px}
 <header class="hero">
   <div class="wrap">
     <div class="topbar">
-      <div class="brand"><span class="dot" data-initials></span><span data-leader-name></span></div>
+      <div class="brand"><span class="dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span data-brand></span></div>
       <span data-region-short></span>
     </div>
     <span class="kicker">Now selecting partners in <span data-region></span></span>
@@ -355,7 +357,7 @@ footer p{margin-bottom:8px}
   const C = CONFIG;
   const initials = C.leaderName.split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
   const fill = (sel, val) => document.querySelectorAll(sel).forEach(el => el.textContent = val);
-  fill("[data-leader-name]", C.leaderName); fill("[data-leader-title]", C.leaderTitle);
+  fill("[data-brand]", C.brandName); fill("[data-leader-name]", C.leaderName); fill("[data-leader-title]", C.leaderTitle);
   fill("[data-leader-bio]", C.leaderBio); fill("[data-insurer]", C.insurer);
   fill("[data-region]", C.region); fill("[data-region-short]", C.region); fill("[data-initials]", initials);
 

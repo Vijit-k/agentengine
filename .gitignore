@@ -1,0 +1,4 @@
+# local-only files, not part of the website
+index.gs
+index.pdf
+google-sheet-script.gs
