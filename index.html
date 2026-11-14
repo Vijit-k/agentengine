@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Quiz: Is Becoming an Insurance Advisor Right for You? | Thane & Mumbai</title>
+<meta name="description" content="Build your own income while helping families stay protected. Flexible hours, full training, work from home. Now selecting partners in Thane and Mumbai.">
+<meta property="og:title" content="Build your own income. Help families stay protected.">
+<meta property="og:description" content="Become a licensed life insurance advisor. Flexible hours, full training, work from home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+/* =========================================================
+   AGENTENGINE SETTINGS. Change only this block per client.
+   ========================================================= */
+const CONFIG = {
+  leaderName:   "Vijit Kunhikandi",
+  leaderTitle:  "Kotak Life Associate Agency Partner",
+  leaderBio:    "22+ years in corporate India leading service delivery teams. PMP certified. Now building a team of advisors who help families plan for the unexpected.",
+  insurer:      "Kotak Life",
+  region:       "Thane & Mumbai",
+  whatsapp:     "919539633566",          // country code + number, no + or spaces
+  sheetWebhook: "",                       // paste Google Apps Script web app URL here
+  metaPixelId:  "1451408073687469",       // leave "" to turn off
+  areas:        ["Thane", "Mumbai", "Navi Mumbai", "Kalyan / Dombivli", "Mira Road / Bhayander", "Other"]
+};
+</script>
+
+<!-- Meta Pixel (loads only if metaPixelId is set) -->
+<script>
+if (CONFIG.metaPixelId) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.metaPixelId);
+  fbq('track', 'PageView');
+}
+</script>
+
+<style>
+:root{
+  --navy:#0a1429; --navy2:#122442; --navy3:#1b3360;
+  --gold:#d4af64; --gold2:#e9cf94;
+  --white:#f5f6f8; --muted:#a7b3c9; --ink:#1a2236; --line:rgba(212,175,100,.25);
+  --green:#25d366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.kicker{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border-bottom:2px solid var(--gold);padding-bottom:4px;margin-bottom:18px}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.15;font-weight:700}
+h1 em,h2 em{font-style:normal;color:var(--gold)}
+h2{font-size:clamp(26px,4.2vw,38px);line-height:1.2;font-weight:700;margin-bottom:14px}
+.lead{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:620px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px Poppins,sans-serif;padding:15px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:active{transform:scale(.98)}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 8px 24px rgba(212,175,100,.25)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-wa{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3)}
+.btn-wa svg{width:20px;height:20px;fill:var(--green)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:56px 0 72px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%)}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-180px;top:-140px;background:radial-gradient(circle,rgba(212,175,100,.22),transparent 65%);pointer-events:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;font-size:14px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--white)}
+.brand .dot{width:34px;height:34px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:15px;font-weight:700}
+.hero .lead{margin:20px 0 32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:36px;font-size:14px;color:var(--muted)}
+.trust span::before{content:"✓";color:var(--gold);font-weight:700;margin-right:8px}
+
+/* cards */
+.grid{display:grid;gap:16px}
+@media(min-width:720px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g5{grid-template-columns:repeat(5,1fr)}}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:600;margin-bottom:6px}
+.card p{font-size:15px;color:var(--muted)}
+.icon{width:44px;height:44px;border-radius:12px;background:rgba(212,175,100,.12);display:grid;place-items:center;margin-bottom:14px}
+.icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.who .grid{grid-template-columns:repeat(2,1fr)}
+.who .card{text-align:center;padding:20px 14px}
+.who .card:last-child{grid-column:1/-1}
+@media(min-width:720px){.who .grid{grid-template-columns:repeat(5,1fr)}.who .card:last-child{grid-column:auto}}
+.who .icon{margin:0 auto 12px}
+.who h3{font-size:16px}
+.who p{font-size:13px}
+
+/* honest block */
+.honest{background:var(--navy2)}
+.honest-box{border-left:4px solid var(--gold);padding:8px 0 8px 22px}
+.honest ul{list-style:none;margin-top:18px;display:grid;gap:12px}
+.honest li{padding-left:30px;position:relative;font-size:16px}
+.honest li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:14px;border-radius:50%;border:2px solid var(--gold)}
+
+/* steps */
+.steps{counter-reset:s}
+.step{position:relative;padding-left:64px;margin-bottom:26px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;display:grid;place-items:center;font-size:18px}
+.step h3{font-size:18px;font-weight:600}
+.step p{color:var(--muted);font-size:15px}
+
+/* about */
+.about{display:grid;gap:24px;align-items:center}
+@media(min-width:720px){.about{grid-template-columns:140px 1fr}}
+.avatar{width:120px;height:120px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;font-size:42px;font-weight:700;color:var(--gold);background:var(--navy2)}
+
+/* form */
+.form-sec{background:linear-gradient(180deg,var(--navy2),var(--navy))}
+form{background:var(--white);color:var(--ink);border-radius:22px;padding:28px 22px;max-width:620px;margin:28px auto 0;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+@media(min-width:720px){form{padding:36px}}
+.field{margin-bottom:18px}
+label.lbl,span.lbl{display:block;font-weight:600;font-size:15px;margin-bottom:8px}
+input[type=text],input[type=tel],select,textarea{width:100%;font:16px Poppins,sans-serif;padding:13px 14px;border:1.5px solid #cfd5e1;border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,100,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{padding:10px 14px;border:1.5px solid #cfd5e1;border-radius:999px;font-size:14px;cursor:pointer;user-select:none}
+.chips input:checked+label{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+.chips input:focus-visible+label{box-shadow:0 0 0 3px rgba(212,175,100,.4)}
+.consent{display:flex;gap:10px;font-size:13px;color:#4a5570;margin:6px 0 22px}
+.consent input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:var(--navy)}
+form .btn-gold{width:100%;font-size:17px}
+.err{color:#b3261e;font-size:13px;margin-top:6px;display:none}
+.thanks{display:none;text-align:center;padding:10px 0}
+.thanks h3{font-size:24px;margin-bottom:8px}
+.thanks p{color:#4a5570;margin-bottom:22px}
+.thanks .btn{background:var(--green);color:#fff}
+.thanks .btn svg{width:20px;height:20px;fill:#fff}
+
+.quiz{background:var(--white);color:var(--ink);border-radius:22px;padding:26px 20px;max-width:620px;margin:28px auto 0;box-shadow:0 20px 50px rgba(0,0,0,.35);text-align:left}
+@media(min-width:720px){.quiz{padding:36px}}
+.qprog{height:8px;background:#e3e7ef;border-radius:99px;overflow:hidden}
+.qbar{height:100%;width:0;background:var(--gold);transition:width .3s}
+.qcount{font-size:13px;color:#6b7590;margin:10px 0 18px;font-weight:500}
+.qtext{font-size:21px;line-height:1.35;margin-bottom:18px}
+.qopts{display:grid;gap:10px}
+.qopt{font:500 16px Poppins,sans-serif;text-align:left;padding:15px 18px;border:1.5px solid #cfd5e1;border-radius:14px;background:#fff;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.qopt:hover{border-color:var(--gold)}
+.qopt.picked{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+.qback{margin-top:16px;background:none;border:0;color:#6b7590;font:500 14px Poppins,sans-serif;cursor:pointer}
+.result{background:var(--navy);color:var(--white);border-radius:16px;padding:22px;margin-bottom:22px}
+.result h3{font-size:21px;margin:8px 0 6px}
+.result p{color:var(--muted);font-size:15px}
+.rtag{display:inline-block;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.cap-lead{font-weight:600;font-size:16px;margin-bottom:16px}
+.tiny{font-size:12px;color:#7a849b;text-align:center;margin-top:12px}
+#capture{background:none;padding:0;margin:0;box-shadow:none;max-width:none;border-radius:0}
+#capture .btn-gold{width:100%;font-size:17px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:600;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+
+footer{padding:36px 0 110px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+footer p{margin-bottom:8px}
+
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(10,20,41,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px;z-index:50}
+.sticky .btn{flex:1;padding:13px 10px;font-size:15px}
+@media(min-width:900px){.sticky{display:none}footer{padding-bottom:36px}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot" data-initials></span><span data-leader-name></span></div>
+      <span data-region-short></span>
+    </div>
+    <span class="kicker">Now selecting partners in <span data-region></span></span>
+    <h1>Build your own income.<br><em>Help families stay protected.</em></h1>
+    <p class="lead">Become a licensed life insurance advisor with <span data-insurer></span>. Work your own hours, from home or on the go. Full training and support from day one.</p>
+    <div class="cta-row">
+      <a href="#apply" class="btn btn-gold" data-track="hero_apply">Take the free 60-second quiz</a>
+      <a href="#" class="btn btn-wa" data-wa="Hi, I saw your page about becoming an insurance advisor. I'd like to know more." data-track="hero_whatsapp">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+        Ask on WhatsApp
+      </a>
+    </div>
+    <div class="trust">
+      <span>No finance background needed</span>
+      <span>Part-time works</span>
+      <span>Exam training included</span>
+    </div>
+  </div>
+</header>
+
+<!-- WHO -->
+<section class="who">
+  <div class="wrap">
+    <span class="kicker">Who this is for</span>
+    <h2>People who are good with people.</h2>
+    <p class="lead" style="margin-bottom:28px">If friends already come to you for advice, you have the most important skill.</p>
+    <div class="grid g5">
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Homemakers</h3><p>Earn on your schedule, around family time</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Retired professionals</h3><p>Put your experience and network to good use</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><h3>Working professionals</h3><p>Build a second income on weekends</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Business owners</h3><p>Add a service your customers already need</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div><h3>Students 18+</h3><p>Real work experience while you study</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section style="background:var(--navy2)">
+  <div class="wrap">
+    <span class="kicker">What you get</span>
+    <h2>You won't be <em>figuring it out alone.</em></h2>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Your hours, your pace</h3><p>No office timings. Work a few hours a week or make it full-time.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg></div><h3>Exam training</h3><p>Step-by-step help to clear the IRDAI licensing exam.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Support on real meetings</h3><p>Join me on your first customer meetings until you're confident.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/></svg></div><h3>Ready-made tools</h3><p>Calculators and plan finders that make every conversation easier.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M6 4h12M6 9h12M9 4c4 0 6 2 6 5s-3 5-7 5l7 7"/></svg></div><h3>Income tied to effort</h3><p>You earn on the policies you help families choose, plus renewals.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Work that matters</h3><p>Every policy you place protects a family if the worst happens.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST -->
+<section class="honest" style="background:var(--navy)">
+  <div class="wrap">
+    <div class="honest-box">
+      <span class="kicker">Before you apply</span>
+      <h2>Is this right for you?</h2>
+      <p class="lead">I'd rather you know this now than find out later.</p>
+      <ul>
+        <li>This is not a salaried job. Your income depends on the families you help.</li>
+        <li>You need to clear an IRDAI licensing exam. We help you prepare.</li>
+        <li>The first few months are about learning. Income builds over time.</li>
+        <li>It suits people who enjoy talking to others and can stay consistent.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section style="background:var(--navy2)">
+  <div class="wrap">
+    <span class="kicker">How it works</span>
+    <h2>Four simple steps.</h2>
+    <div class="steps" style="margin-top:28px;max-width:640px">
+      <div class="step"><h3>Take the 60-second quiz</h3><p>See if this suits you and get the free starter guide. No commitment.</p></div>
+      <div class="step"><h3>A 20-minute call</h3><p>We talk about your goals and answer every question, including earnings.</p></div>
+      <div class="step"><h3>Get trained and licensed</h3><p>Complete the training and clear the licensing exam with our help.</p></div>
+      <div class="step"><h3>Start helping families</h3><p>Begin with people you know, with support on every meeting.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="wrap about">
+    <div class="avatar" data-initials></div>
+    <div>
+      <span class="kicker">Who you'll work with</span>
+      <h2 data-leader-name></h2>
+      <p style="color:var(--gold);font-weight:500;margin-bottom:10px" data-leader-title></p>
+      <p class="lead" data-leader-bio></p>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ (lead magnet) -->
+<section class="form-sec" id="apply">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Free 60-second quiz</span>
+    <h2>Is this the right second income <em>for you?</em></h2>
+    <p class="lead" style="margin:0 auto">Answer 7 quick questions. Get your personal result, plus a free starter guide on WhatsApp.</p>
+
+    <div class="quiz" id="quiz">
+      <div class="qprog"><div class="qbar" id="qbar"></div></div>
+      <div class="qcount" id="qcount"></div>
+      <div id="qstage"></div>
+
+      <form id="capture" novalidate style="display:none">
+        <div class="result" id="result"></div>
+        <p class="cap-lead">Where should I send your full result and the free guide?</p>
+        <div class="field">
+          <label class="lbl" for="name">Your name</label>
+          <input type="text" id="name" autocomplete="name">
+          <div class="err" data-err="name">Please enter your name.</div>
+        </div>
+        <div class="field">
+          <label class="lbl" for="phone">WhatsApp number</label>
+          <input type="tel" id="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number">
+          <div class="err" data-err="phone">Please enter a valid 10-digit number.</div>
+        </div>
+        <div class="field">
+          <label class="lbl" for="area">Where do you live?</label>
+          <select id="area"><option value="">Select your area</option></select>
+          <div class="err" data-err="area">Please select your area.</div>
+        </div>
+        <label class="consent"><input type="checkbox" id="consent"><span>Send my result and the guide on WhatsApp. I'm happy to be contacted about this opportunity.</span></label>
+        <div class="err" data-err="consent" style="margin-top:-14px;margin-bottom:14px">Please tick the box so I can send it.</div>
+        <button type="submit" class="btn btn-gold" id="submitBtn">Send me my result</button>
+        <p class="tiny">No spam. No pressure. Your details are never sold or shared.</p>
+      </form>
+
+      <div class="thanks" id="thanks">
+        <h3>Done, <span id="tyName"></span>!</h3>
+        <p>Your result and the free guide are on their way. Tap below to get them right now on WhatsApp.</p>
+        <a href="#" class="btn" id="tyWa">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+          Get my result on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ -->
+<section>
+  <div class="wrap" style="max-width:760px">
+    <span class="kicker">Questions</span>
+    <h2>Common questions.</h2>
+    <div style="margin-top:20px">
+      <details><summary>Do I need a finance or sales background?</summary><p>No. You get training on the products and on how to have simple, honest conversations with families. Many good advisors started with no sales experience.</p></details>
+      <details><summary>Is there any cost to join?</summary><p>There is a small one-time fee for the licensing exam and registration. I'll share the exact amount on our call, before you commit to anything.</p></details>
+      <details><summary>How much can I earn?</summary><p>It depends on how many families you help. There is no fixed salary. We go through how earnings work, with real examples, on the call.</p></details>
+      <details><summary>Can I do this part-time?</summary><p>Yes. Many advisors start with a few hours a week alongside home, studies or another job.</p></details>
+      <details><summary>Do I need to go to an office?</summary><p>No. Most work happens on phone, WhatsApp and short meetings with families near you.</p></details>
+      <details><summary>Who can apply?</summary><p>Anyone 18 or older living in <span data-region></span> who has passed 10th or 12th and is comfortable talking to people. Final selection follows the insurer's process.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--white)" data-leader-name></strong>, <span data-leader-title></span>.</p>
+    <p>This page describes an opportunity to become a licensed insurance agent. Appointment is subject to the insurer's selection process and IRDAI licensing requirements. Earnings depend entirely on individual effort and are not guaranteed. There is no fixed salary.</p>
+    <p>Your details are used only to contact you about this opportunity and are never sold or shared.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="#apply" class="btn btn-gold" data-track="sticky_apply">Take the quiz</a>
+  <a href="#" class="btn btn-wa" data-wa="Hi, I'd like to know more about becoming an insurance advisor." data-track="sticky_whatsapp">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  const C = CONFIG;
+  const initials = C.leaderName.split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+  const fill = (sel, val) => document.querySelectorAll(sel).forEach(el => el.textContent = val);
+  fill("[data-leader-name]", C.leaderName); fill("[data-leader-title]", C.leaderTitle);
+  fill("[data-leader-bio]", C.leaderBio); fill("[data-insurer]", C.insurer);
+  fill("[data-region]", C.region); fill("[data-region-short]", C.region); fill("[data-initials]", initials);
+
+  const waLink = msg => "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
+  document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
+  const areaSel = document.getElementById("area");
+  C.areas.forEach(a => { const o = document.createElement("option"); o.value = o.textContent = a; areaSel.appendChild(o); });
+
+  const track = (ev, p) => { try { if (window.fbq) fbq("trackCustom", ev, p || {}); } catch(e){} };
+  document.querySelectorAll("[data-track]").forEach(el => el.addEventListener("click", () => track("Click_" + el.dataset.track)));
+
+  const q = new URLSearchParams(location.search);
+  const source = { utm_source: q.get("utm_source") || "", utm_campaign: q.get("utm_campaign") || "",
+                   utm_content: q.get("utm_content") || "", fbclid: q.get("fbclid") ? "yes" : "" };
+
+  /* ---------- the quiz: 6 questions, scored ---------- */
+  const QUESTIONS = [
+    { key:"occupation", q:"What do you do right now?", opts:[
+      ["Homemaker",0],["Working (job)",0],["Retired",0],["Own business",0],["Student",0]] },
+    { key:"age", q:"Your age group?", opts:[["18 to 25",0],["26 to 40",0],["41 to 55",0],["56 or above",0]] },
+    { key:"advice", q:"Do friends and family come to you for advice?", opts:[
+      ["Often, I'm the go-to person",3],["Sometimes",2],["Rarely",1]] },
+    { key:"comfort", q:"How do you feel about talking to new people?", opts:[
+      ["I enjoy it",3],["Fine once I know what to say",2],["I find it hard",1]] },
+    { key:"hours", q:"How much time could you give each week?", opts:[
+      ["Under 5 hours",1],["5 to 10 hours",2],["10 to 20 hours",3],["Full-time",3]] },
+    { key:"motivation", q:"What matters most to you right now?", opts:[
+      ["Extra income for my family",0],["Being financially independent",0],["Work that helps people",0],["Using my network and experience",0]] },
+    { key:"start", q:"If it feels right, when could you start?", opts:[
+      ["Within a month",3],["In 1 to 3 months",2],["Just exploring for now",1]] }
+  ];
+  const answers = {}; let score = 0, idx = 0;
+  const stage = document.getElementById("qstage"), bar = document.getElementById("qbar"), count = document.getElementById("qcount");
+  const capture = document.getElementById("capture");
+  let started = false;
+
+  function render(){
+    const Q = QUESTIONS[idx];
+    bar.style.width = (idx / QUESTIONS.length * 100) + "%";
+    count.textContent = "Question " + (idx+1) + " of " + QUESTIONS.length;
+    stage.innerHTML = '<h3 class="qtext">' + Q.q + '</h3><div class="qopts">' +
+      Q.opts.map((o,i) => '<button type="button" class="qopt" data-i="'+i+'">' + o[0] + '</button>').join("") + '</div>' +
+      (idx > 0 ? '<button type="button" class="qback">← Back</button>' : '');
+    stage.querySelectorAll(".qopt").forEach(b => b.addEventListener("click", () => {
+      if (!started) { started = true; track("QuizStart"); }
+      const o = Q.opts[+b.dataset.i];
+      answers[Q.key] = { label:o[0], pts:o[1] };
+      b.classList.add("picked");
+      setTimeout(() => { idx++; idx < QUESTIONS.length ? render() : finish(); }, 220);
+    }));
+    const back = stage.querySelector(".qback");
+    if (back) back.addEventListener("click", () => { idx--; render(); });
+  }
+
+  function finish(){
+    score = Object.values(answers).reduce((s,a) => s + a.pts, 0);   // max 15
+    let tier, head, body;
+    if (score >= 12) { tier = "Strong fit"; head = "You're a strong fit.";
+      body = "People already trust you, and you have the time to build this properly. Your answers match what this work needs most."; }
+    else if (score >= 9) { tier = "Good fit"; head = "You're a good fit, with the right support.";
+      body = "You have the core of what it takes. With training and someone beside you on your first meetings, the rest is very learnable."; }
+    else { tier = "Explore first"; head = "Worth exploring, at your own pace.";
+      body = "This may not be the right moment to go all in, and that's fine. The guide will help you decide calmly, with no pressure."; }
+    answers._tier = tier;
+    bar.style.width = "100%"; count.textContent = "Your result is ready";
+    stage.innerHTML = "";
+    document.getElementById("result").innerHTML =
+      '<div class="rtag">' + tier + '</div><h3>' + head + '</h3><p>' + body + '</p>';
+    capture.style.display = "block";
+    track("QuizComplete", { result: tier });
+  }
+
+  const showErr = (k, on) => { const e = capture.querySelector('[data-err="'+k+'"]'); if (e) e.style.display = on ? "block" : "none"; };
+  capture.addEventListener("submit", async e => {
+    e.preventDefault();
+    const d = {
+      name: document.getElementById("name").value.trim(),
+      phone: document.getElementById("phone").value.replace(/\D/g,"").slice(-10),
+      area: areaSel.value, consent: document.getElementById("consent").checked
+    };
+    const checks = { name: d.name.length > 1, phone: /^[6-9]\d{9}$/.test(d.phone), area: !!d.area, consent: d.consent };
+    let ok = true; Object.entries(checks).forEach(([k,v]) => { showErr(k,!v); if(!v) ok = false; });
+    if (!ok) return;
+    const btn = document.getElementById("submitBtn"); btn.disabled = true; btn.textContent = "Sending...";
+
+    const payload = Object.assign({ timestamp:new Date().toISOString(), page:location.hostname + location.pathname,
+      name:d.name, phone:d.phone, area:d.area, score:String(score), result:answers._tier }, source);
+    QUESTIONS.forEach(Q => payload[Q.key] = answers[Q.key] ? answers[Q.key].label : "");
+    if (C.sheetWebhook) { try { await fetch(C.sheetWebhook, { method:"POST", mode:"no-cors", body:new URLSearchParams(payload) }); } catch(err){} }
+    try { if (window.fbq) fbq("track", "Lead", { content_name:"advisor_quiz", result:answers._tier }); } catch(e){}
+
+    capture.style.display = "none";
+    document.getElementById("thanks").style.display = "block";
+    document.getElementById("tyName").textContent = d.name.split(" ")[0];
+    const msg = "Hi, I just took the advisor quiz. Please send my result and the free guide.\n" +
+      "Name: " + d.name + "\nArea: " + d.area + "\nResult: " + answers._tier +
+      "\nCurrently: " + payload.occupation + "\nAge: " + payload.age + "\nTime per week: " + payload.hours;
+    const ty = document.getElementById("tyWa"); ty.href = waLink(msg); ty.target = "_blank"; ty.rel = "noopener";
+    ty.addEventListener("click", () => track("Click_thanks_whatsapp"));
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
